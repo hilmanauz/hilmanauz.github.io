@@ -91,7 +91,7 @@ body {
     font-size: 15px;
     display: inline-block;
     opacity: 0.8;
-    box-shadow: 0 7px rgb(189, 10, 10);
+    box-shadow: 0 7px rgb(129, 13, 13);
 }
 
 #reset:active{
