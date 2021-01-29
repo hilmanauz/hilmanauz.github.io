@@ -24,6 +24,7 @@ let indexAnswer = {
     Perceiving: 0,
 }
 let index = '';
+let fname = document.getElementById("fname").value;
 
 function setQuestionList(){
     for ( let i = 0; i < mbti.length; i++){
@@ -98,7 +99,6 @@ function nextClick() {
 function quizOver() {
     mbtiBox[0].classList.add("hide");
     resultBox[0].classList.remove("hide");
-    let fname = document.getElementById("fname").value;
     resultBox[0].querySelector(".name").innerHTML = fname;
     getDetail();
     getIndicator();
@@ -131,9 +131,8 @@ function resetQuiz() {
         Perceiving: 0,
     }
     counter = 0;
-    document.getElementById("fname").value = "";
-    fname = "";
     document.getElementsByClassName(totalIndex)[0].classList.add("hide");
+    totalIndex = "";
 }
 
 function tryAgain() {
@@ -144,6 +143,7 @@ function tryAgain() {
 }
 
 function goHome() {
+    fname = "";
     resultBox[0].classList.add("hide");
     homeBox[0].classList.remove("hide");
     resetQuiz();
