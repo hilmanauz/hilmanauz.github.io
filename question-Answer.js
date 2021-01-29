@@ -23,7 +23,7 @@ let indexAnswer = {
     Judging: 0,
     Perceiving: 0,
 }
-
+let index = '';
 
 function setQuestionList(){
     for ( let i = 0; i < mbti.length; i++){
@@ -61,12 +61,20 @@ function getAllElementQuestion(){
  
 function getResult(answer) {  
     let id = answer.id;
-    let index = '';
     index = questionIndex[id];
     answer.classList.add("click");
     indexAnswer[index]++;
     btnNext[0].classList.add("already-clicked");
     unclickableAnswer();
+}
+
+function resetClick() {
+    for ( let i = 0; i < optionChoice[0].children.length; i++){
+        optionChoice[0].children[i].classList.remove("has-already-answered");
+        optionChoice[0].children[i].classList.remove("click");
+        btnNext[0].classList.remove("already-clicked");
+    }
+    indexAnswer[index]--;
 }
 
 function unclickableAnswer(){
@@ -209,6 +217,7 @@ function goMbti() {
         alert("Please type your name on input box");
         document.getElementById("fname").value = "";
     } else {
+        alert("Get Ready for The test !!!\n1. The test takes 10 minutes to finish\n2. You have to choose your answer to move on the next question\n3. Reset answer button to change the answer ")
         homeBox[0].classList.add("hide");
         mbtiBox[0].classList.remove("hide");
         setQuestionList();

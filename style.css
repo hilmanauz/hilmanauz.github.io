@@ -80,6 +80,31 @@ body {
     box-shadow: 0 7px #1a7940;
 }
 
+#reset{
+    float: right;
+    padding: 15px 20px;
+    background-color: rgb(202, 35, 35);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    opacity: 0.8;
+    box-shadow: 0 7px rgb(189, 10, 10);
+}
+
+#reset:active{
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+
+#reset:hover{
+    opacity: 1;
+}
+
+
 .btn:active{
     position: relative;
     top: 7px;
@@ -123,7 +148,7 @@ body {
 }
 
 .mbti-box .option-choice .option {
-    background-color: black;
+    background-color: #5c8f7f;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 15px;
@@ -161,7 +186,7 @@ body {
     height: 100%;
     position: absolute;
     width: 100%;
-    background-color: grey;
+    background-color: white;
     animation: slidetoRight .5s ease forwards;
 }
 @keyframes slidetoRight{
