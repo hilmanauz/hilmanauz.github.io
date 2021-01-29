@@ -13,67 +13,67 @@ const mbti = [
     },
     {
         question: 'Dalam sebuah pesta, apakah Anda lebih memilih untuk...',
-        option: ['Mengatur random acara pesta','membiarkan semua berjalan natural'],
+        option: ['Mengatur random acara pesta','Membiarkan semua berjalan natural'],
         '0': 'Judging',
         '1': 'Perceiving'
     },
     {
         question: 'Apakah Anda lebih suka dianggap...',
-        option: ['orang yang praktis','seseorang dengan visi'],
+        option: ['Orang yang praktis','Seseorang dengan visi'],
         '0': 'Sensing',
         '1': 'Intuition'
     },
     {
         question: 'Dalam sebuah kelompok, apakah Anda lebih sering...',
-        option: ['memperkenalkan diri ke orang lain','menunggu diperkenalkan orang lain'],
+        option: ['Memperkenalkan diri ke orang lain','Menunggu diperkenalkan orang lain'],
         '0': 'Extrovert',
         '1': 'Introvert'
     },
     {
         question: 'Sesuatu yang terjadwal menurut Anda...',
-        option: ['menarik dan baik bagi Anda','mengekang bagi Anda'],
+        option: ['Menarik dan baik bagi Anda','Mengekang bagi Anda'],
         '0': 'Judging',
         '1': 'Perceiving'
     },
     {
         question: 'Apakah Anda...',
-        option: ['berbicara dengan mudah ke hampir semua orang','berbicara hanya kepada orang tertentu dan kondisi tertentu'],
+        option: ['Berbicara dengan mudah ke hampir semua orang','Berbicara hanya kepada orang tertentu dan kondisi tertentu'],
         '0': 'Extrovert',
         '1': 'Introvert'
     },
     {
         question: 'Ketika Anda akan pergi ke suatu tempat pada suatu hari, Anda akan...',
-        option: ['merencanakan yang akan Anda lakukan dan kapan dilakukan','pergi begitu saja'],
+        option: ['Merencanakan yang akan Anda lakukan dan kapan dilakukan','Pergi begitu saja'],
         '0': 'Judging',
         '1': 'Perceiving'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['berpikir','merasa'],
+        option: ['Berpikir','Merasa'],
         '0': 'Thinking',
         '1': 'Feeling'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['fakta','ide'],
+        option: ['Fakta','Ide'],
         '0': 'Sensing',
         '1': 'Intuition'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['ketulusan','ketenangan'],
+        option: ['Ketulusan','Ketenangan'],
         '0': 'Extrovert',
         '1': 'Introvert'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['hal yang meyakinkan','hal yang menyentuh perasaan'],
+        option: ['Hal yang meyakinkan','Hal yang menyentuh perasaan'],
         '0': 'Thinking',
         '1': 'Feeling'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['terjadwalkan','lihat situasi'],
+        option: ['Terjadwalkan','Lihat situasi'],
         '0': 'Judging',
         '1': 'Perceiving'
     },
@@ -85,31 +85,31 @@ const mbti = [
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['menganalisis','bersimpati'],
+        option: ['Menganalisis','Bersimpati'],
         '0': 'Thinking',
         '1': 'Feeling'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['sistematis','spontan'],
+        option: ['Sistematis','Spontan'],
         '0': 'Judging',
         '1': 'Perceiving'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda..',
-        option: ['menentukan','menyuarakan'],
+        option: ['Menentukan','Menyuarakan'],
         '0': 'Sensing',
         '1': 'Intuition'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['kongkrit','abstrak'],
+        option: ['Kongkrit','Abstrak'],
         '0': 'Sensing',
         '1': 'Intuition'
     },
     {
         question: 'Kata mana yang lebih menarik bagi Anda...',
-        option: ['pola pikir','kehangatan hati'],
+        option: ['Pola pikir','Kehangatan hati'],
         '0': 'Thinking',
         '1': 'Feeling'
     },
