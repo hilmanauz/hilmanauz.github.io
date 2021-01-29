@@ -115,7 +115,7 @@ const mbti = [
     },
     {
         question: 'Mana yang menurut Anda lebih penting...',
-        option: ['Ketepatan dalam berpikir','Hubungan antarindividu yang harmonis'],
+        option: ['Ketepatan dalam berpikir','Hubungan antar individu yang harmonis'],
         '0': 'Thinking',
         '1': 'Feeling'
     },
