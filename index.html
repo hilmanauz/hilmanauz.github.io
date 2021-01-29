@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./gambar/logo.png" />
+    <title>MBTI Test</title>
+</head>
+<body>
+    <div class = "home-box settings">
+        <h1><i>Myers-Briggs Type Indicator</i></h1>
+        <h1>Test</h1>
+        <p>Please input your name :</p>
+        <input type="text" id= "fname" placeholder="Type your name"><br> <br>
+        <button type="button" class="btn home" onclick="goMbti()">Start Test</button>
+    </div>
+
+    <div class= "mbti-box settings hide">
+        <div class="question-number">
+
+        </div>
+        <div class="question-text">
+
+        </div>
+        <div class="option-choice">
+
+        </div>
+        <div class="btn-next-question">
+            <button type="button" class="btn" onclick="nextClick()">Next</button>
+        </div>
+    </div>
+
+    <div class= "result-box hide">
+        <div class="statistics settings">
+            <h1><span class="name"></span> IS</h1>
+            <div class="indicator">
+                <div class= "logo"></div>
+                <div class= "logo"></div>
+                <div class= "logo"></div>
+                <div class= "logo"></div>
+            </div>
+            <div class="detail">
+                <p id ="paraghDetail">Detail :</p>
+                <table>
+                    <tr>
+                        <td>Total Question</td>
+                        <td><span class="total-question"></span></td>
+                    </tr>
+                    <tr>
+                        <td style="color:pink">Extrovert</td>
+                        <td><span class="extrovert"></span></td>
+                    </tr>
+                    <tr>
+                        <td style="color:pink">Introvert</td>
+                        <td><span class="introvert"></span></td>
+                    </tr>
+                    <tr>
+                        <td style="color:greenyellow">Sensing</td>
+                        <td><span class="sensing"></span></td>
+                    </tr>
+                    <tr>
+                        <td style="color:greenyellow">Intuition</td>
+                        <td><span class="intuition"></span></td>
+                    </tr>
+                    <tr>
+                        <td style="color:aqua">Thinking</td>
+                        <td><span class="thinking"></span></td>
+                    </tr>
+                    <tr>
+                        <td style="color:aqua">Feeling</td>
+                        <td><span class="feeling"></span></td>
+                    </tr>
+                    <tr>
+                        <td style="color:purple">Judging</td>
+                        <td><span class="judging"></span></td>
+                    </tr>
+                    <tr>
+                        <td style="color:purple">Perceiving</td>
+                        <td><span class="perceiving"></span></td>
+                    </tr>
+                </table>
+                <p><span style="color:red">Note: </span> The same color indicates one category that combine to form the basis of a person’s personality</p>
+                
+                <button type="button" class="btn try" onclick="tryAgain()">Try Again</button>
+                <button type="button" class="btn go-home" onclick="goHome()">Go to Home</button>
+            </div>
+        </div>
+        <div class="information-result settings hide">
+            <div class="enfj info hide">
+            <h1>Tipe ENFJ</h1>
+            <h2>(Extraverted, Intuitive, Feeling, Judging)</h2>
+            <p>Sosok ENFJ dikenal sebagai pengajar dan pemberi. Mereka melihat potensi pada orang lain dan ingin membantunya dalam mencapai yang terbaik. Sebagai pendengar yang baik, ENFJ senang menghargai pertimbangan pribadi dirinya dan orang lain. ENFJ juga memiliki jaringan perkenalan yang luas dan dapat menjadi pemimpin yang baik. Seperti Barrack Obama, pemimpin Amerika Serikat yang hangat itu, ia berkepribadian ENFJ, loh!</p>
+            </div>
+            <div class="enfp info hide">
+                <h1>Tipe ENFP</h1>
+                <h2>(Extraverted, Intuitive, Feeling, Perceiving)</h2>
+                <p>Siapa nih yang tipe ENFP? (hahaha aku sendiri tipe ENFP guys!) Kalau kamu tipe ENFP, kamu tergolong sosok yang memiliki mental juara dan kreatif. Tipe ENFP juga disebut sebagai juru kampanye. ENFP selalu melihat kehidupan sebagai sesuatu yang penuh dengan kemungkinan. Sosok ini juga cenderung menyukai hal-hal abstrak dan lebih mementingkan pertimbangan pribadi daripada logika. Mengapa? Karena ENFP adalah jiwa bebas sejati. Ia senang membangun emosional dan sosial dengan orang lain. Hal ini membuat ENFP menjadi sosok yang populer dan friendly. Sosok ENFP cenderung akan menghargai pendapat orang lain untuk mencapai kesepakatan bersama. Hm, denger-denger sih jadi seniman atau reporter sangat cocok untuk ENFP lho!</p>
+                <img src="https://media.giphy.com/media/l49bSLMIEqvlkZy7pj/giphy.gif" alt="ENFP">
+            </div>
+            <div class="entj info hide">
+                <h1>Tipe ENTJ</h1>
+                <h2>(Extraverted, Intuitive, Thinking, Judging)</h2>
+                <p>Tipe ENTJ dikenal sebagai sosok panglima dan pelaksana. Ia memiliki hubungan dan jaringan yang luas dengan siapapun. ENTJ juga dikenal sebagai orang yang suka berterus terang. Penuh akan motivasi hidup, ENTJ selalu semangat ketika mencoba meraih tujuan. Tekad yang kuat dan ambisi yang tinggi membuat tipe ENTJ memiliki kepribadian alami untuk menjadi pemimpin. Eits, tapi jangan salah! Ambisi yang tinggi tidak selamanya positif. Terkadang, tipe ENTJ keras kepala, tidak sabaran, dan tidak toleran. Huft!</p>
+                <img src="https://media.giphy.com/media/d6Q8iv648kVEqItRV0/giphy.gif" alt="ENTJ">
+            </div>
+            <div class="entp info hide">
+                <h1>Tipe ENTP</h1>
+                <h2>(Extraverted, Intuitive, Thinking, Perceiving)</h2>
+                <p>Sebagai sosok yang blak-blakan, ENTP juga dikenal sebagai orang yang visioner dan penemu. ENTP juga merupakan sosok yang cepat, siaga, berbakat, dan telaten. Karena gerak-geriknya yang cepat dan selalu siaga, ENTP disebut cocok dengan profesi pengacara, diplomat, programmer, atau bahkan peneliti dan ilmuwan. Menurut 16personalities.com, kepribadian ENTP adalah tipe pendebat.</p>
+                <img src="https://media.giphy.com/media/lnhBpPnxumSgRnIglK/giphy.gif" alt="ENTP">
+            </div>
+            <div class="esfj info hide">
+                <h1>Tipe ESFJ</h1>
+                <h2>(Extraverted, Sensing, Feeling, Judging)</h2>
+                <p>Memiliki banyak teman membuat tipe ESFJ sebagai sosok yang bersahabat. ESFJ juga dikenal sebagai sosok pengasuh dan pemberi. Oleh 16personalities.com, ESFJ adalah sosok yang senang mendukung orang lain. Ya, kalau kamu adalah seorang ESFJ, maka kamu adalah sosok yang sangat suportif. ESFJ juga adalah tipe yang tidak suka konflik. Ia sangat menghargai ketertiban sosial. Oh ya, tipe ESFJ ini adalah tipe yang paling banyak ditemukan di dunia, lho!</p>
+                <img src="https://media.giphy.com/media/hWpgOMRBDQdrVs0Lzd/giphy.gif" alt="ESFJ">
+            </div>
+            <div class="esfp info hide">
+                <h1>Tipe ESFP</h1>
+                <h2>(Extraverted, Sensing, Feeling, Perceiving)</h2>
+                <p>Ciri-ciri dari ESFP adalah sosok yang mencintai kehidupan, orang, dan kenyamanan materi. ESFP juga dikenal sebagai performers atau penghibur. ESFP akan spontan dalam melakukan hal yang ia senangi. Tipe kepribadian ini adalah sosok bintang. Ia suka ketika lampu disorot ke arahnya dan panggung adalah dunianya. Hm, kalau kamu merupakan sosok ini, sepertinya cocok menjadi aktor, penyanyi, atau ikutan boy & girl group deh!</p>
+                <img src="https://media.giphy.com/media/Q7WaWuYUVXWaD807L9/giphy.gif" alt="ESFP">
+            </div>
+            <div class="estp info hide">
+                <h1>Tipe ESTP</h1>
+                <h2>(Extraverted, Sensing, Thinking, Perceiving)</h2>
+                <p>ESTP adalah tipe yang berorientasi pada tindakan. Kadang, ESTP bisa menjadi sosok yang sembrono di beberapa waktu. Jika kamu termasuk ESTP, kamu akan menjadi pribadi yang menyenangkan dan hangat dalam hubungan asmara. ESTP juga dikenal sebagai sosok pengusaha dan pekerja keras. Hayo, kira-kira ada gak panutan kamu yang merupakan sosok ESTP?</p>
+                <img src="https://media.giphy.com/media/dyvg7BLhipCrLTShx9/giphy.gif" alt="ESTP">
+            </div>
+            <div class="estj info hide">
+                <h1>Tipe ESTJ </h1>
+                <h2>(Extraverted, Sensing, Thinking, Judging)</h2>
+                <p>Dilansir dari 16personalities.com, ESTJ adalah sosok eksekutif. Apa sih eksekutif itu? Eksekutif adalah sosok yang mewakili tradisi dan tatanan sosial masyarakat. Sosok ESTJ kerap kali diterima secara sosial untuk menyatukan keluarga dan masyarakat. ESTJ adalah sosok yang jujur dan memegang nilai kebenaran. Hm, kurang lebih tipe ESTJ akan selalu menegakkan keadilan, apa yang benar dan apa yang salah! Keren, ya? Kalau kamu ESTJ, kamu bisa jadi detektif lho!
+                </p>
+                <img src="https://media.giphy.com/media/hoIfYY84mU5xSpjXFW/giphy.gif" alt="ESTJ">
+            </div>
+            <div class="infj info hide">
+                <h1>Tipe INFJ</h1>
+                <h2>(Introverted, Intuitive, Feeling, Judging)</h2>
+                <p>Sosok yang dikenal idealis ini sangat pendiam. INFJ juga merupakan sosok yang lembut dan sangat berpegang teguh pada hal-hal yang ia yakini. INFJ adalah sosok pelindung. Selain itu, INFJ juga memiliki kemauan keras dan mudah dalam menciptakan keseimbangan kehidupan. Sayangnya, terkadang keyakinan kuat yang ia miliki justru membuat INFJ menjadi orang yang terlalu perfeksionis. Apa ya profesi yang cocok dengan INFJ? Denger-denger sih advokat. Hm, oh iya! berapa tokoh dunia yang merupakan sosok INFJ adalah Nelson Mandela dan Mother Teresa. 
+                </p>
+                <img src="https://media.giphy.com/media/Y1vitMh7zwcfoXa7LV/giphy.gif" alt="INFJ">
+            </div>
+            <div class="infp info hide">
+                <h1>Tipe INFP</h1>
+                <h2>(Introverted, Intuitive, Feeling, Perceiving)</h2>
+                <p>INFP memiliki kepribadian mediator. Ia senang mencari celah kebaikan di setiap kesempatan atau bahkan di setiap hal-hal buruk. Meskipun INFP adalah orang yang pendiam dan sering dikenal tidak ramah, INFP memiliki semangat yang membara di dada dan sikap peduli akan orang lain. Ketika INFP menemukan lawan bicara yang memiliki kecenderungan yang sama, INFP akan menonjolkan keharmonisan, kesenangan, dan inspirasi. 
+                </p>
+                <img src="https://media.giphy.com/media/LMtDDSEF5jdIRzJ2vp/giphy.gif" alt="INFP">
+            </div>
+            <div class="intj info hide">
+                <h1>Tipe INTJ</h1>
+                <h2>(Introverted, Intuitive, Thinking, Judging)</h2>
+                <p>Berbeda dengan INFP, INTJ adalah sosok yang pemikir. Hal itu menjadikan sosok INTJ sebagai sosok yang kreatif, imajinatif, dan sangat strategis untuk segala tujuannya. Tipe kepribadian yang satu ini merupakan tipe yang sangat independen dibanding tipe lainnya. INTJ senang akan gagasan-gagasan baru dan terjun dalam penelitian ilmiah. Maka dari itu, INTJ sangat cocok untuk menjadi ilmuwan atau bahkan juga arsitektur. 
+                </p>
+                <img src="https://media.giphy.com/media/URva3HbIqwn550FeOc/giphy.gif" alt="INTJ">
+            </div>
+            <div class="intp info hide">
+                <h1>Tipe INTP</h1>
+                <h2>(Introverted, Intuitive, Thinking, Perceiving)</h2>
+                <p>INTP juga merupakan sosok pemikir. Hal itu membuat INTP menjadi sosok yang penuh akan ide di kepalanya. Dari luar INTP terlihat sebagai sosok arogan, namun INTP akan sangat ramah dengan sosok yang mereka kenali atau orang yang memiliki ketertarikan sama. Ia mencintai hal-hal berbau buku, serta menjadi sosok yang paling bisa dipercaya. Selain itu, INTP adalah sosok yang sangat ahli dalam mengembangkan wawasan dan solusi. 
+                </p>
+                <img src="https://media.giphy.com/media/XyDuRIf3lVqBWzaeNh/giphy.gif" alt="INTP">
+            </div>
+            <div class="isfj info hide">
+                <h1>Tipe ISFJ </h1>
+                <h2>(Introverted, Sensing, Feeling, Judging)</h2>
+                <p>Memiliki empati yang tinggi. Ya, kalimat yang mendeskripsikan sosok dengan tipe kepribadian ISFJ. Hm, selain empati, ISFJ sangat hati-hati dan juga pendiam. Meskipun begitu, sosok ISFJ dapat menjalin komunikasi dan hubungan sosial yang baik. Kepribadian ISFJ adalah pembela. Terkadang bisa menjadi super waspada dan juga teliti. Walau ISFJ suka menunda suatu hal, ISFJ percaya bisa menyelesaikannya tepat waktu. Hayo, yang suka nunda nugas, tapi ternyata selesai, kamu ISFJ kali?
+                </p>
+                <img src="https://media.giphy.com/media/KbGmORHwx1ZSjBPXyb/giphy.gif" alt="ISFJ">
+            </div>
+            <div class="isfp info hide">
+                <h1>Tipe ISFP </h1>
+                <h2>(Introverted, Sensing, Feeling, Perceiving)</h2>
+                <p>Sebagai sosok yang berjiwa bebas membuat ISFP dikenal sebagai tipe kepribadian petualang. ISFP merupakan sosok seniman yang mengedepankan estetika. Ia senang dengan kehidupan yang penuh warna. Ide yang melampaui batas dan totalitas membuat ISFP dikenal pula sebagai sosok yang senang menjadi diri sendiri. Meskipun tergolong tipe yang spontanitas dan tidak mudah ditebak, ISFP mampu mengevaluasi dan mengintropeksi diri di kala sedang berada di fase jenuh. 
+                </p>
+                <img src="https://media.giphy.com/media/H3ezhCIVlmoN9PdyVg/giphy.gif" alt="ISFP">
+            </div>
+            <div class="istj info hide">
+                <h1>Tipe ISTJ </h1>
+                <h2>(Introverted, Sensing, Thinking, Judging)</h2>
+                <p>Tipe ISTJ adalah tipe yang dianggap paling banyak jumlahnya, sekitar 13%. Jiwa yang dimiliki tipe ini adalah jiwa yang tak kenal lelah terhadap tugas dan sangat terstruktur. Selain itu, ISTJ juga merupakan sosok yang senang mengambil tanggung jawab, serta bangga dengan pekerjaan yang mereka lakukan. Orang dengan tipe ini cenderung akan menyimpan pendapatnya sendiri. Terkadang, tipe ini juga bisa menjadi sosok yang keras kepala. 
+                </p>
+                <img src="https://media.giphy.com/media/cmNP2gqXeAVYZB215N/giphy.gif" alt="ISTJ">
+            </div>
+            <div class="istp info hide">
+                <h1>Tipe ISTP</h1>
+                <h2>(Introverted, Sensing, Thinking, Perceiving)</h2>
+                <p>Tipe ISTP adalah tipe yang toleran, fleksibel, dan bertindak cepat untuk menemukan solusi yang terbaik. ISTP adalah tipe yang sangat rasional. ISTP juga dikenal sebagai kepribadian mekanik, sehingga mereka senang mengeksplorasi satu proyek ke proyek lain dengan tangan dan mata mereka. Selain itu, ISTP sebagai tipe yang tenang, namun bisa tiba-tiba menjadi tipe yang spontan. 
+                </p>
+                <img src="https://media.giphy.com/media/hT6yEgEWB9LVM30j9q/giphy.gif" alt="ISTP">
+            </div>
+        </div>
+    </div>
+
+
+<script src="list-question.js"></script>
+<script src="question-Answer.js"></script>
+</body>
+</html>

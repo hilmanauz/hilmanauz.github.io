@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-size: 16px;
+    background-image: url("./gambar/sample-pattern.png");
+    max-height: 1000px;
+    /* background-color: black; */
+    font-family: 'Slabo 27px', serif;
+}
+
+.settings {
+    max-width: 500px;
+    background-color: #3275a8;
+    margin: 150px auto;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 32px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 32px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 32px 1px rgba(0,0,0,0.75);
+}
+
+.settings::before,
+.settings::after { 
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.settings.hide, .btn.hide, .info.hide, .result-box.hide{
+    display: none;
+}
+
+.home-box h1, .home-box p {
+    text-align: center;
+    line-height: 40px;
+}
+
+.home-box h1 {
+    font-weight: 500px;
+}
+
+.home-box p {
+    font-weight: 500px;
+}
+
+.home-box input{
+    margin: 0 142px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.btn {
+    padding: 15px 45px;
+    background-color: #5dca88;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    opacity: 0.8;
+    box-shadow: 0 7px #1a7940;
+}
+
+.btn:active{
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.mbti-box .question-number,
+.mbti-box .question-text,
+.mbti-box .option-choice,
+.mbti-box .btn-next-question{
+    width: 100%;
+    float: left;
+}
+
+.btn-next-question{
+    pointer-events: none;
+}
+
+.btn-next-question.already-clicked{
+    pointer-events: all;
+}
+
+.mbti-box .question-number{
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    line-height: 25px;
+}
+
+.mbti-box .question-text {
+    padding: 10px 0px;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.mbti-box .option-choice .option {
+    background-color: black;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: white;
+    animation: fadeIn 0.8s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.mbti-box .option-choice .option.has-already-answered {
+    pointer-events: none;
+}
+
+.mbti-box .option-choice .option:hover{
+    background-color: darkgray;
+    color: black;
+    opacity: 0.1;
+}
+
+.mbti-box .option-choice .option.click::before{
+    content: '';
+    z-index: -1;
+    text-align: center;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: grey;
+    animation: slidetoRight .5s ease forwards;
+}
+@keyframes slidetoRight{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.mbti-box .option-choice .option.click{
+    color: black;
+}
+
+.result-box, .home-box{
+    text-align: center;
+}
+
+.result-box .statistics .indicator .logo{
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 15px 3px 15px 0;
+    background-size: 75%;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 0;
+}
+
+.result-box .statistics .indicator .logo.e{
+background-image: url("./gambar/E.png");
+}
+
+.result-box .statistics .indicator .logo.i{
+    background-image: url("./gambar/I.png");
+    background-size: 45%;
+}
+
+.result-box .statistics .indicator .logo.n{
+    background-image: url("./gambar/N.png");
+}
+
+.result-box .statistics .indicator .logo.s{
+    background-image: url("./gambar/S.png");
+}
+
+.result-box .statistics .indicator .logo.t{
+    background-image: url("./gambar/T.png");
+}
+
+.result-box .statistics .indicator .logo.f{
+    background-image: url("./gambar/F.png");
+}
+
+.result-box .statistics .indicator .logo.j{
+    background-image: url("./gambar/J.png");
+}
+
+.result-box .statistics .indicator .logo.p{
+    background-image: url("./gambar/P.png");
+}
+.result-box .statistics .extrovert, .result-box .introvert{
+    color: pink;
+}
+.result-box .statistics .sensing, .result-box .intuition{
+    color: greenyellow;
+}
+.result-box .statistics .thinking, .result-box .feeling{
+    color: aqua;
+}
+.result-box .statistics .judging, .result-box .perceiving{
+    color:purple;
+}
+.result-box p, .result-box span {
+    margin-top: 5px;
+    font-weight: 1000;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#paraghDetail{
+    font-size: 20px;
+}
+
+.result-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 30px 0;
+    background-color: grey;
+}
+
+.result-box table td{
+    border: 1px solid black;
+    padding: 8px 15px;
+    text-align: left;
+    width: 50%;
+}
+
+.result-box .btn{
+    margin: 20px 20px 30px 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.result-box .name{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.result-box .detail p{
+    margin-bottom: 20px;
+}
+
+.result-box .statistics {
+    display: inline-block;
+}
+
+.result-box .information-result {
+    display: inline-block;
+    position: absolute;
+    bottom: 50;
+    margin-left: 10px;
+}
+
+.result-box {
+    width: 900px;
+}
+
+.result-box .information-result .info {
+    padding: 10px;
+}
+
+.result-box .information-result .info h1 {
+    font-weight: 1000;
+    font-size: 50px;
+
+}
+
+.result-box .information-result .info p{
+    color: white;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.result-box .information-result .info img{
+    padding-top: 15px;
+    width: 100%;
+}
