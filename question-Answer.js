@@ -24,7 +24,6 @@ let indexAnswer = {
     Perceiving: 0,
 }
 let index = '';
-let fname = document.getElementById("fname").value;
 
 function setQuestionList(){
     for ( let i = 0; i < mbti.length; i++){
@@ -99,6 +98,7 @@ function nextClick() {
 function quizOver() {
     mbtiBox[0].classList.add("hide");
     resultBox[0].classList.remove("hide");
+    let fname = document.getElementById("fname").value;
     resultBox[0].querySelector(".name").innerHTML = fname;
     getDetail();
     getIndicator();
@@ -210,6 +210,7 @@ function getDetail() {
 
 function goMbti() {
     let fname = document.getElementById("fname").value;
+
     if (fname.length > 10) {
         alert("Your username is too long, it should be less than 10 characters");
         document.getElementById("fname").value = "";
