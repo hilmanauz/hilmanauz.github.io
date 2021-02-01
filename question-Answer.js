@@ -144,6 +144,7 @@ function tryAgain() {
 
 function goHome() {
     fname = "";
+    document.getElementById("fname").value = "";
     resultBox[0].classList.add("hide");
     homeBox[0].classList.remove("hide");
     resetQuiz();
