@@ -35,6 +35,8 @@ function setQuestionList(){
 function getAllElementQuestion(){
     // set question Number
     questionNumber[0].innerHTML = `Question Number ${counter+1} Of ${mbti.length}`;
+    questionNumber[0].style.fontWeight = "bold";
+    questionNumber[0].style.color = "white";
     // set random Question
     let indexQuestion = Math.floor(Math.random()*questionList.length);
     questionIndex = questionList[indexQuestion];
