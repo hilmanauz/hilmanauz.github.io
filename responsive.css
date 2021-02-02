@@ -1,0 +1,15 @@
+@media all and (max-width: 670px) {
+    .result-box .information-result {
+        display: block;
+        position: relative;
+        left: 45px;
+        bottom: 50px;
+    }
+    .result-box .statistics {
+        display: block;
+    }
+    .result-box {
+        width:100%;
+    }
+    
+}
